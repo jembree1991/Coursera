@@ -50,7 +50,8 @@ public class CaesarCipher {
         String encrypted = encrypt(message, key);
         System.out.println("key is " + key + "\n" + encrypted); */
         //System.out.println(encrypt("At noon be in the conference room with your hat on for a surprise party. YELL LOUD!", 15));
-        System.out.println(encryptTwoKeys("At noon be in the conference room with your hat on for a surprise party. YELL LOUD!", 8, 21));
+        //System.out.println(encrypt("Just a test string with lots of eeeeeeeeeeeeeeeees", 23));
+        System.out.println(encryptTwoKeys("Top ncmy qkff vi vguv vbg ycpx", 26 - 2, 26 - 20));
     }
 
 

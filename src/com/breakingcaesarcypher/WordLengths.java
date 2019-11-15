@@ -13,25 +13,27 @@ public class WordLengths {
             char firstChar = currWord.charAt(0);
             char lastChar = currWord.charAt(currWord.length() - 1);
             if (!Character.isLetter(lastChar)) {
-                wordLength -= 1;
+                wordLength--;
             }
             if (!Character.isLetter(firstChar)) {
-                wordLength -= 1;
+                wordLength--;
             }
             if (wordLength > 30) {
                 wordLength = 30;
             }
-            counts[wordLength] += 1;
+            counts[wordLength]++;
         }
         return counts;
     }
 
 
     public int indexOfMax(int[] values) {
-        int highestWordCountIndex = 0;
-        for (int currIndex : values) {
-            if (values[currIndex] > highestWordCountIndex) {
-                highestWordCountIndex = currIndex;
+        int highestWordCount = 0;
+        int highestWordCountIndex = -1;
+        for (int i = 0; i < values.length; i++) {
+            if (values[i] > highestWordCount) {
+                highestWordCountIndex = i;
+                highestWordCount = values[i];
             }
         }
         return highestWordCountIndex;
@@ -41,8 +43,9 @@ public class WordLengths {
     public void testCountWordLengths() {
         FileResource fr = new FileResource();
         int[] counts = new int[31];
-        //int [] currCounts = countWordLengths(fr, counts);
-        System.out.println(indexOfMax(countWordLengths(fr, counts)));
+        int [] currCounts = countWordLengths(fr, counts);
+        System.out.println(Arrays.toString(currCounts));
+        System.out.println(indexOfMax(countWordLengths(fr, currCounts)));
     }
 
 
