@@ -21,6 +21,9 @@ public class WordLengths {
             if (wordLength > 30) {
                 wordLength = 30;
             }
+            if (wordLength < 0) {
+                wordLength = 0;
+            }
             counts[wordLength]++;
         }
         return counts;

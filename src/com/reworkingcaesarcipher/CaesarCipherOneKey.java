@@ -96,8 +96,8 @@ public class CaesarCipherOneKey {
     public static void main(String [] args) {
         CaesarCipherOneKey cipher = new CaesarCipherOneKey(15);
         CaesarCipherOneKey cipher2 = new CaesarCipherOneKey(18);
-        cipher.simpleTests();
+        //cipher.simpleTests();
         //cipher2.simpleTests();
-
+        System.out.println(cipher.encrypt("Can you imagine life WITHOUT the internet AND computers in your pocket?"));
     }
 }
